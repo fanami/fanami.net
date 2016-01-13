@@ -9,3 +9,7 @@ ROWTERMINATOR = '\n'
 )
 
 select * from #yi
+
+
+SELECT * 
+FROM OPENROWSET('Microsoft.ACE.OLEDB.12.0','Excel 12.0;Database=C:\tmp\test.xlsx','SELECT * FROM [Sheet1$]')
