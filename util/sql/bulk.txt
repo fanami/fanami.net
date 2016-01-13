@@ -1,0 +1,11 @@
+create table #yi (id int)
+BULK
+INSERT #yi
+FROM 'c:\tmp\ids.sql'
+WITH
+(
+FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n'
+)
+
+select * from #yi
